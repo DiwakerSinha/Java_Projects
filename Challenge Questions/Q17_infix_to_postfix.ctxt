@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Q17_infix_to_postfix
+comment1.params=
+comment1.target=void\ main()
+comment2.params=c
+comment2.target=int\ precedence(char)
+numComments=3

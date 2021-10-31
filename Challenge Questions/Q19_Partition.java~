@@ -1,0 +1,48 @@
+import java.util.*;
+public class Q19_Partition
+{
+    public static void main()
+    {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter a number whose partitions you want to find");
+        int inp=sc.nextInt();
+        int ar[]=new int[inp];
+        for(int i=0;i<inp;i++)//initialises all indices to 0
+        {
+            ar[i]=0;
+        }
+
+        int counter=0;
+        out:for(int i=1;;i++)
+        {
+            int total=0;
+            for(int j=0;j<inp;j++)
+            {
+                total+=ar[j];
+            }
+            if(total==inp)
+                counter++;
+            total=0;    
+            ar[ar.length-1]+=1;
+            int fullcheck=0;
+            for(int k=inp-1;k>=0;k--)
+            {
+                if(ar[k]!=9)
+                    ar[k]++;
+                else
+                {
+                    fullcheck++;
+                    if(fullcheck==inp)
+                    {
+                        
+                        break out;
+                    }
+                    ar[k]=0;
+                    if(k-1>=0)
+                        ar[k-1]++;
+                    
+                }
+            }
+        }
+    }   
+}

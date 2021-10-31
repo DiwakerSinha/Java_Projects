@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ main()
+comment1.params=num\ base
+comment1.target=int\ basecon(int,\ int)
+comment2.params=str
+comment2.target=int\ max(java.lang.String)
+numComments=3
